@@ -1,8 +1,11 @@
-FROM elasticsearch:1.7
+FROM elasticsearch:2.4
+
+RUN apt update -y && \
+    apt install procps -y
 
 RUN echo "xpack.security.enabled: false" >> /usr/share/elasticsearch/config/elasticsearch.yml
-RUN plugin --install elasticsearch/elasticsearch-analysis-icu/2.7.0 && \
-    plugin --install elasticsearch/elasticsearch-analysis-phonetic/2.7.0
+RUN bin/plugin install analysis-icu && \
+    bin/plugin install analysis-phonetic
 
 ADD docker-healthcheck.sh /docker-healthcheck.sh
 
