@@ -7,6 +7,7 @@ I extracted official Dockerfile files, applied some minor fixes and built a dock
 Configured with persistent storage
 
 [Quickstart Guide](QUICKSTART.md)
+[New Relic Guide](NEWRELIC.md)
 
 ## Usage
 
@@ -317,7 +318,7 @@ services:
       - MAGENTO_CLOUD_RELATIONSHIPS=eyJkYXRhYmFzZSI6W3siaG9zdCI6ImRiIiwicGF0aCI6Im1hZ2VudG8yIiwicGFzc3dvcmQiOiJtYWdlbnRvMiIsInVzZXJuYW1lIjoibWFnZW50bzIiLCJwb3J0IjoiMzMwNiJ9XSwicmVkaXMiOlt7Imhvc3QiOiJyZWRpcyIsInBvcnQiOiI2Mzc5In1dLCJlbGFzdGljc2VhcmNoIjpbeyJob3N0IjoiZWxhc3RpY3NlYXJjaCIsInBvcnQiOiI5MjAwIn1dfQ==
       - MAGENTO_CLOUD_ROUTES=eyJodHRwOlwvXC9tYWdlbnRvMi5kb2NrZXJcLyI6eyJ0eXBlIjoidXBzdHJlYW0iLCJvcmlnaW5hbF91cmwiOiJodHRwOlwvXC97ZGVmYXVsdH0ifSwiaHR0cHM6XC9cL21hZ2VudG8yLmRvY2tlclwvIjp7InR5cGUiOiJ1cHN0cmVhbSIsIm9yaWdpbmFsX3VybCI6Imh0dHBzOlwvXC97ZGVmYXVsdH0ifX0=
       - MAGENTO_CLOUD_VARIABLES=eyJBRE1JTl9FTUFJTCI6ImFkbWluQGV4YW1wbGUuY29tIiwiQURNSU5fUEFTU1dPUkQiOiIxMjMxMjNxIiwiQURNSU5fVVJMIjoiYWRtaW4ifQ==
-      - MAGENTO_RUN_MODE=developer
+      - MAGENTO_RUN_MODE=default
       - 'PHP_EXTENSIONS=bcmath bz2 calendar exif gd gettext intl mysqli pcntl pdo_mysql soap sockets sysvmsg sysvsem sysvshm opcache zip redis xsl ioncube'
 volumes:
   app:
@@ -339,6 +340,12 @@ Optional components
   - elasticsearch
   - redis
   - mailhog
+  
+### Tweaks
+
+PHP settings can be adjusted via
+
+    `./app/php.ini`
   
 ## Mailhog
 
