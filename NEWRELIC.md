@@ -36,6 +36,10 @@ Inside cli container
 
     /newrelic/newrelic.ini => /usr/local/etc/php/conf.d/newrelic.ini
 
+## New relic agent log
+
+    tail -f /var/log/newrelic/php_agent.log
+
 ## Configure within Magento
 
 Stores > Configuration > General > New Relic Monitoring

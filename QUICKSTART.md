@@ -10,11 +10,11 @@ git clone git@github.com:DominicWatts/Magento2CloudDocker.git ./
     
 ## 3 Create magento folder
 
-    mkdir app
+    mkdir htdocs
     
 ## 4 Download
 
-Inside `./app`
+Inside `./htdocs`
 
 ### 4.1 Hypernode
 

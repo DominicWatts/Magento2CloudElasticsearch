@@ -7,11 +7,12 @@ I extracted official Dockerfile files, applied some minor fixes and built a dock
 Configured with persistent storage
 
 [Quickstart Guide](QUICKSTART.md)
+
 [New Relic Guide](NEWRELIC.md)
 
 ## Usage
 
-Extract Magento open source to `/app`
+Extract Magento open source to `/htdocs`
 
 ### Generic
 
@@ -96,7 +97,7 @@ Warning: permissions
 
 ### Run CLI installer
 
-With files extracted to `/app` run CLI install process
+With files extracted to `/htdocs` run CLI install process
 
     docker-compose run --rm cli magento-command setup:install --admin-firstname Admin --admin-lastname User [...]
 
@@ -324,7 +325,7 @@ volumes:
   app:
     driver_opts:
       type: none
-      device: '${PWD}/app'
+      device: '${PWD}/htdocs'
       o: bind
 networks:
   magento:
@@ -345,7 +346,7 @@ Optional components
 
 PHP settings can be adjusted via
 
-    `./app/php.ini`
+    `./htdocs/php.ini`
   
 ## Mailhog
 
