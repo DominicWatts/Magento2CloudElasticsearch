@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:7.9.3
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.11.2
 
 RUN echo "xpack.security.enabled: false" >> /usr/share/elasticsearch/config/elasticsearch.yml
 RUN echo "discovery.type: single-node" >> /usr/share/elasticsearch/config/elasticsearch.yml
