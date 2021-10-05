@@ -163,7 +163,7 @@ varnish versions: 4.0, 6.2
 
 - [Git](https://github.com/DominicWatts/Magento2CloudElasticsearch)
 
-elasticsearch versions: 1.7, 2.4, 5.2, 6.5, 6.8, 7.5, 7.6, 7.7, 7.9
+elasticsearch versions: 1.7, 2.4, 5.2, 6.5, 6.8, 7.5, 7.6, 7.7, 7.9, 7.11
 
 ## Useful Resources
 - [Docker Hub](https://hub.docker.com/r/domw/)
